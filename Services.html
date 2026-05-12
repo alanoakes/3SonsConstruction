@@ -3,40 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="3 Son's Construction Services — Roofing, Painting, Gutters, Siding in Memphis, TN." />
+  <meta name="description" content="3 Son's Construction Services — Roofing, Painting, Gutters, Siding, Remodeling & more in Memphis, TN." />
   <title>Services &amp; Projects | 3 Son's Construction</title>
   <link href="docs/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="docs/assets/3sons-theme.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
-
-<script>
-  const buttons = document.querySelectorAll('#serviceTabs button');
-  const cards   = document.querySelectorAll('.album .col[data-category]');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-
-      // Update active button style
-      buttons.forEach(b => {
-        b.style.background = 'transparent';
-        b.style.color = 'var(--brand-blue)';
-      });
-      btn.style.background = 'var(--brand-blue)';
-      btn.style.color = '#fff';
-
-      // Filter cards
-      const filter = btn.dataset.filter;
-      cards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-3sons fixed-top">
@@ -64,159 +36,210 @@
   <div class="container position-relative text-center text-white">
     <span class="section-eyebrow" style="color:var(--brand-orange);">What We Offer</span>
     <h1>Services &amp; Projects</h1>
-    <p class="lead mx-auto" style="max-width:600px;">From rooftop to foundation, we handle the jobs that protect and beautify your property. Browse our service areas and completed projects below.</p>
+    <p class="lead mx-auto" style="max-width:600px;">From rooftop to foundation, we handle the jobs that protect and beautify your property. Browse by category below.</p>
     <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
       <a href="Contact.html" class="btn btn-brand btn-lg">Get a Free Estimate</a>
     </div>
   </div>
 </header>
 
-<!-- SERVICE FILTER TABS 
--->
+<!-- FILTER TABS -->
 <div class="bg-white border-bottom sticky-top" style="top:84px;z-index:100;">
   <div class="container">
-    <ul class="nav nav-pills py-3 gap-2 flex-nowrap overflow-auto" id="serviceTabs">
-      <li class="nav-item"><button class="nav-link active px-4 py-2" style="background:var(--brand-blue);border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;" data-filter="all">All Projects</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="exterior">Exterior</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="interior">Interior</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="restoration">Restoration</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="home-systems">Home Systems</button></li>
+    <ul class="nav py-3 gap-2 flex-nowrap overflow-auto" id="serviceTabs">
+      <li class="nav-item">
+        <button class="svc-btn svc-btn--active" data-filter="all">All Services</button>
+      </li>
+      <li class="nav-item">
+        <button class="svc-btn" data-filter="exterior">Exterior</button>
+      </li>
+      <li class="nav-item">
+        <button class="svc-btn" data-filter="interior">Interior</button>
+      </li>
+      <li class="nav-item">
+        <button class="svc-btn" data-filter="restoration">Restoration</button>
+      </li>
+      <li class="nav-item">
+        <button class="svc-btn" data-filter="upgrades">Upgrades &amp; Additions</button>
+      </li>
     </ul>
   </div>
 </div>
 
-<!-- PROJECT CARDS ALBUM -->
+<!-- SERVICE CARDS -->
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="serviceGrid">
 
-      <!-- Roofing projects -->
-      <div class="col" data-category="roofing">
+      <!-- EXTERIOR -->
+      <div class="col" data-category="exterior">
         <div class="card project-card h-100">
           <div class="card-img-placeholder"><i class="bi bi-house-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
-            <span class="card-badge">Home-Systems</span>
-            <h5 class="card-title">Generac</h5>
-            <p class="card-text text-muted small">Complete tear-off and replacement with 30-year architectural shingles. Storm damage claim handled from start to finish.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" data-category="roofing">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-building" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
             <span class="card-badge">Exterior</span>
-            <h5 class="card-title">Pools</h5>
-            <p class="card-text text-muted small">TPO membrane installation on a 12,000 sq ft commercial warehouse. On-schedule, on-budget delivery.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" data-category="roofing">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-tools" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Exterior</span>
-            <h5 class="card-title">Stucco</h5>
-            <p class="card-text text-muted small">Same-day emergency tarping following a severe storm, followed by a full repair assessment and scheduled fix.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Painting projects -->
-      <div class="col" data-category="painting">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-brush-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Painting</span>
             <h5 class="card-title">Roofing &amp; Gutters</h5>
-            <p class="card-text text-muted small">Full exterior prep, prime, and two-coat paint application on a two-story colonial. Power-washed and ready to sell.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" data-category="painting">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-door-open-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Painting</span>
-            <h5 class="card-title">Siding</h5>
-            <p class="card-text text-muted small">All walls, ceilings, and trim painted in a new construction home — color consultation included, done in 4 days.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" data-category="painting">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-shop" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Painting</span>
-            <h5 class="card-title">Retail Storefront Exterior</h5>
-            <p class="card-text text-muted small">Commercial exterior repaint including masonry block, stucco, and metal fascia for a mid-south retail strip.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+            <p class="card-text text-muted small">Full roof replacements, repairs, seamless gutter installation, gutter guards, and emergency tarping for residential and commercial properties.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
           </div>
         </div>
       </div>
 
-      <!-- Gutters projects -->
-      <div class="col" data-category="gutters">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-droplet-half" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Gutters</span>
-            <h5 class="card-title">Seamless Aluminum Gutters</h5>
-            <p class="card-text text-muted small">Full perimeter seamless 6" gutters installed with hidden hangers and downspout extensions, color-matched to trim.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" data-category="gutters">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-shield-check" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Gutters</span>
-            <h5 class="card-title">Gutter Guard Installation</h5>
-            <p class="card-text text-muted small">Micro-mesh gutter guard system installed on 200 LF of existing gutters — no more cleaning, no more clogging.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Siding projects -->
-      <div class="col" data-category="siding">
+      <div class="col" data-category="exterior">
         <div class="card project-card h-100">
           <div class="card-img-placeholder"><i class="bi bi-grid-3x3-gap-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
-            <span class="card-badge">Siding</span>
-            <h5 class="card-title">Full Vinyl Siding Replacement</h5>
-            <p class="card-text text-muted small">Removed rotted wood siding and installed premium insulated vinyl siding with new moisture barrier and trim throughout.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" data-category="siding">
-        <div class="card project-card h-100">
-          <div class="card-img-placeholder"><i class="bi bi-house-door-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
-          <div class="card-body">
-            <span class="card-badge">Siding</span>
-            <h5 class="card-title">James Hardie Board Siding</h5>
-            <p class="card-text text-muted small">Fiber cement board &amp; batten siding installation with factory-finish coating — built to withstand Memphis weather for 30+ years.</p>
-            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+            <span class="card-badge">Exterior</span>
+            <h5 class="card-title">Siding</h5>
+            <p class="card-text text-muted small">Vinyl, fiber cement (Hardie board), and wood siding installation and replacement. Boosts curb appeal, improves insulation, and protects your home.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
           </div>
         </div>
       </div>
 
-    </div>
+      <div class="col" data-category="exterior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-brush-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Exterior</span>
+            <h5 class="card-title">Exterior Painting</h5>
+            <p class="card-text text-muted small">Full exterior paint jobs including power washing, surface prep, priming, and two-coat finish. Residential and commercial properties.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="exterior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-bricks" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Exterior</span>
+            <h5 class="card-title">Stucco</h5>
+            <p class="card-text text-muted small">New stucco application, repair, and refinishing for residential and commercial exteriors. Durable, weather-resistant, and professionally finished.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="exterior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-back" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Exterior</span>
+            <h5 class="card-title">Concrete</h5>
+            <p class="card-text text-muted small">Driveways, walkways, patios, and foundations. New pours, repairs, and resurfacing — built to last in the Memphis climate.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERIOR -->
+      <div class="col" data-category="interior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-door-open-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Interior</span>
+            <h5 class="card-title">Interior Painting</h5>
+            <p class="card-text text-muted small">Walls, ceilings, trim, and doors. Color consultation available. Single rooms to full-home repaints — clean, professional results every time.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="interior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-house-heart-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Interior</span>
+            <h5 class="card-title">Interior Remodel</h5>
+            <p class="card-text text-muted small">Kitchen and bathroom remodels from concept to completion. Tile, fixtures, cabinetry, lighting, and layout changes handled by our experienced crews.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="interior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-layout-three-columns" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Interior</span>
+            <h5 class="card-title">Flooring</h5>
+            <p class="card-text text-muted small">Hardwood, LVP, tile, and carpet installation and replacement. Subfloor prep, transitions, and trim included for a polished finish.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="interior">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-box-seam-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Interior</span>
+            <h5 class="card-title">Custom Cabinets, Closets &amp; Bookshelves</h5>
+            <p class="card-text text-muted small">Built-in and freestanding custom cabinetry, closet systems, and bookshelves — designed and built to fit your space and style perfectly.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESTORATION -->
+      <div class="col" data-category="restoration">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-droplet-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Restoration</span>
+            <h5 class="card-title">Water Restoration</h5>
+            <p class="card-text text-muted small">Water damage assessment, remediation, and full restoration. We work with insurance adjusters and restore your property to pre-loss condition quickly.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="restoration">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-moisture" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Restoration</span>
+            <h5 class="card-title">Crawl Space Repair &amp; Encapsulation</h5>
+            <p class="card-text text-muted small">Vapor barriers, insulation, structural repair, and full encapsulation systems. Keeps moisture out, improves air quality, and protects your foundation.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- UPGRADES & ADDITIONS -->
+      <div class="col" data-category="upgrades">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-lightning-charge-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Upgrades &amp; Additions</span>
+            <h5 class="card-title">Generac Generator Installation</h5>
+            <p class="card-text text-muted small">Whole-home standby generator installation and hookup. Never lose power again — automatic transfer, professionally installed and permitted.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-category="upgrades">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-water" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Upgrades &amp; Additions</span>
+            <h5 class="card-title">Pool Installation</h5>
+            <p class="card-text text-muted small">In-ground pool construction, decking, and surround work. From excavation to first swim — we coordinate the full project so you don't have to.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
   </div>
 </div>
 
 <!-- CTA BAND -->
 <section class="cta-band text-center">
   <div class="container position-relative">
-    <h2 class="mb-2">Don't See Your Project Type?</h2>
-    <p class="text-white opacity-75 mb-4" style="font-size:1.1rem;">Give us a call — we handle a wide range of exterior and interior construction work.</p>
+    <h2 class="mb-2">Don't See What You Need?</h2>
+    <p class="text-white opacity-75 mb-4" style="font-size:1.1rem;">Give us a call — we handle a wide range of construction and renovation work across the Memphis area.</p>
     <a href="tel:9012888962" class="phone-number d-block mb-4">901.288.8962</a>
     <a href="Contact.html" class="btn btn-brand btn-lg">Contact Us Today</a>
   </div>
@@ -228,7 +251,7 @@
     <div class="row g-5">
       <div class="col-md-4">
         <div class="footer-logo"><img src="docs/assets/images/logo_3Sons.jpg" alt="3 Son's Construction" /></div>
-        <p style="font-size:.9rem;">Roofing &bull; Painting &bull; Gutters &bull; Siding<br>Commercial &amp; Residential &mdash; Memphis, TN</p>
+        <p style="font-size:.9rem;">Roofing &bull; Painting &bull; Gutters &bull; Siding &bull; Remodeling<br>Commercial &amp; Residential &mdash; Memphis, TN</p>
         <div class="mt-3">
           <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
           <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
@@ -244,10 +267,10 @@
       </div>
       <div class="col-6 col-md-3">
         <h5>Services</h5>
-        <a href="Services.html">Roofing</a>
-        <a href="Services.html">Painting</a>
-        <a href="Services.html">Gutters</a>
-        <a href="Services.html">Siding</a>
+        <a href="Services.html">Exterior</a>
+        <a href="Services.html">Interior</a>
+        <a href="Services.html">Restoration</a>
+        <a href="Services.html">Upgrades &amp; Additions</a>
       </div>
       <div class="col-md-3">
         <h5>Contact</h5>
@@ -263,5 +286,27 @@
 </footer>
 
 <script src="docs/assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const buttons = document.querySelectorAll('#serviceTabs .svc-btn');
+  const cards   = document.querySelectorAll('#serviceGrid .col[data-category]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+      // Update active state
+      buttons.forEach(b => b.classList.remove('svc-btn--active'));
+      btn.classList.add('svc-btn--active');
+
+      // Filter cards
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        card.style.display =
+          (filter === 'all' || card.dataset.category === filter)
+            ? 'block'
+            : 'none';
+      });
+    });
+  });
+</script>
 </body>
 </html>
