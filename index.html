@@ -1,466 +1,285 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="alanoakes.io" />
-    <meta name="generator" content="Astro v5.13.2" />
-    <title>3 Son's Construction</title>
-    <link rel="canonical" href="docs/assets/carousel.css" />
-    <script src="docs/assets/js/color-modes.js"></script>
-    <link href="docs/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <link href="docs/assets/carousel.css" rel="stylesheet" />
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow:
-          inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
-      }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
-      }
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="check2" viewBox="0 0 16 16"> <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" ></path> </symbol> <symbol id="circle-half" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" ></path> </symbol> <symbol id="moon-stars-fill" viewBox="0 0 16 16"> <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" ></path> <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" ></path> </symbol> <symbol id="sun-fill" viewBox="0 0 16 16"> <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" ></path> </symbol> </svg>
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">3 Son's Construction</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Prices.html">Prices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <div class="container">
-              <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
-                <p class="opacity-75">
-                  Some representative placeholder content for the first slide of
-                  the carousel.
-                </p>
-                <p>
-                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>
-                  Some representative placeholder content for the second slide
-                  of the carousel.
-                </p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
-                <p>
-                  Some representative placeholder content for the third slide of
-                  this carousel.
-                </p>
-                <p>
-                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
-                </p>
-              </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="3 Son's Construction – Roofing, Painting, Gutters & Siding. Commercial & Residential. Memphis, TN. Call 901.288.8962." />
+  <title>3 Son's Construction | Roofing · Painting · Gutters · Siding</title>
+  <link href="docs/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="docs/assets/3sons-theme.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-3sons fixed-top">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html" style="color:white;">
+      <img src="docs/assets/images/logo_3Sons.jpg" alt="3 Son's Construction" />
+       <!-- 3 Son's Construction -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center gap-md-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        <li class="nav-item ms-md-3"><a class="btn btn-brand" href="tel:9012888962"><i class="bi bi-telephone-fill me-1"></i>901.288.8962</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="nav-accent-bar"></div>
+<div style="height:80px;"></div>
+
+<!-- HERO CAROUSEL -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5500">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="hero-slide hero-slide-1">
+        <div class="container">
+          <div class="hero-content col-lg-7">
+            <span class="hero-eyebrow">Memphis, TN — Commercial &amp; Residential</span>
+            <h1 class="hero-title">Quality You Can <span>See</span> From the Street</h1>
+            <p class="hero-body">Trusted roofing, painting, gutters, and siding — done right, on time, every time.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="Contact.html" class="btn btn-brand btn-lg">Get a Free Estimate</a>
+              <a href="Services.html" class="btn btn-brand-outline btn-lg">Our Services</a>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <!-- Marketing messaging and featurettes
-  ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <h2 class="fw-normal">Heading</h2>
-            <p>
-              Some representative placeholder content for the three columns of
-              text below the carousel. This is the first column.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <h2 class="fw-normal">Heading</h2>
-            <p>
-              Another exciting bit of representative placeholder content. This
-              time, we've moved on to the second column.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <h2 class="fw-normal">Heading</h2>
-            <p>
-              And lastly this, the third column of representative placeholder
-              content.
-            </p>
-            <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
-            </p>
-          </div>
-          <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-        <!-- START THE FEATURETTES -->
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">
-              First featurette heading.
-              <span class="text-body-secondary">It’ll blow your mind.</span>
-            </h2>
-            <p class="lead">
-              Some great placeholder content for the first featurette here.
-              Imagine some exciting prose here.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                500x500
-              </text>
-            </svg>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide hero-slide-2">
+        <div class="container">
+          <div class="hero-content col-lg-7">
+            <span class="hero-eyebrow">Roofing Specialists</span>
+            <h1 class="hero-title">Protecting <span>Homes &amp;</span> Businesses</h1>
+            <p class="hero-body">From minor repairs to complete replacements, our roofing crews deliver lasting results backed by our workmanship guarantee.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="Contact.html" class="btn btn-brand btn-lg">Request a Quote</a>
+              <a href="Services.html" class="btn btn-brand-outline btn-lg">View Projects</a>
+            </div>
           </div>
         </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">
-              Oh yeah, it’s that good.
-              <span class="text-body-secondary">See for yourself.</span>
-            </h2>
-            <p class="lead">
-              Another featurette? Of course. More placeholder content here to
-              give you an idea of how this layout would work with some actual
-              real-world content in place.
-            </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                500x500
-              </text>
-            </svg>
-          </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">
-              And lastly, this one.
-              <span class="text-body-secondary">Checkmate.</span>
-            </h2>
-            <p class="lead">
-              And yes, this is the last block of representative placeholder
-              content. Again, not really intended to be actually read, simply
-              here to give you a better view of what this would look like with
-              some actual content. Your content.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-              <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-                500x500
-              </text>
-            </svg>
-          </div>
-        </div>
-        <hr class="featurette-divider" />
-        <!-- /END THE FEATURETTES -->
       </div>
-      <!-- /.container -->
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>
-          &copy; 2017–2025 Company, Inc. &middot;
-          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-        </p>
-      </footer>
-    </main>
-    <script
-      src="docs/assets/dist/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-  </body>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide hero-slide-3">
+        <div class="container">
+          <div class="hero-content col-lg-7">
+            <span class="hero-eyebrow">Interior &amp; Exterior Painting</span>
+            <h1 class="hero-title">A Fresh Coat <span>Changes</span> Everything</h1>
+            <p class="hero-body">Professional painters, premium materials, flawless finishes. We prep, paint, and clean up — so you don't have to lift a finger.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="Contact.html" class="btn btn-brand btn-lg">Get a Free Estimate</a>
+              <a href="Services.html" class="btn btn-brand-outline btn-lg">Our Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3 stat-item"><span class="stat-number">15+</span><span class="stat-label">Years in Business</span></div>
+      <div class="col-6 col-md-3 stat-item"><span class="stat-number">500+</span><span class="stat-label">Projects Completed</span></div>
+      <div class="col-6 col-md-3 stat-item"><span class="stat-number">100%</span><span class="stat-label">Licensed &amp; Insured</span></div>
+      <div class="col-6 col-md-3 stat-item"><span class="stat-number">5&#9733;</span><span class="stat-label">Avg. Customer Rating</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section style="padding:5rem 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">What We Do</span>
+      <h2 class="section-title">Our Core Services</h2>
+      <div class="section-divider mx-auto"></div>
+      <p class="text-muted mx-auto" style="max-width:560px;">3 Son's Construction handles every aspect of your home's exterior — one call, one crew, one company you can trust.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="service-icon-block">
+          <div class="service-icon"><i class="bi bi-house-fill"></i></div>
+          <h3>Roofing</h3>
+          <p class="text-muted small">Full roof replacements, repairs, inspections, and emergency tarping for residential and commercial properties.</p>
+          <a href="Services.html" class="btn btn-brand-blue btn-sm mt-2">Learn More</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="service-icon-block">
+          <div class="service-icon"><i class="bi bi-brush-fill"></i></div>
+          <h3>Painting</h3>
+          <p class="text-muted small">Interior and exterior painting with premium paints, thorough prep work, and clean, professional results.</p>
+          <a href="Services.html" class="btn btn-brand-blue btn-sm mt-2">Learn More</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="service-icon-block">
+          <div class="service-icon"><i class="bi bi-droplet-half"></i></div>
+          <h3>Gutters</h3>
+          <p class="text-muted small">Seamless gutter installation, cleaning, repair, and guard systems to protect your foundation year-round.</p>
+          <a href="Services.html" class="btn btn-brand-blue btn-sm mt-2">Learn More</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="service-icon-block">
+          <div class="service-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+          <h3>Siding</h3>
+          <p class="text-muted small">Vinyl, fiber cement, and wood siding installation and replacement that boosts curb appeal and insulation.</p>
+          <a href="Services.html" class="btn btn-brand-blue btn-sm mt-2">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURETTE 1 -->
+<section class="featurette-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <span class="section-eyebrow">Roofing</span>
+        <h2 class="section-title">A Roof That Lasts Decades, Not Years</h2>
+        <div class="section-divider"></div>
+        <p class="text-muted">We use only manufacturer-approved materials and follow industry best practices for installation. Every job comes with a written workmanship warranty so you can rest easy knowing your home is protected.</p>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Asphalt, metal &amp; flat roofing</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Storm damage assessment &amp; insurance claims</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Free roof inspections</li>
+        </ul>
+        <a href="Contact.html" class="btn btn-brand mt-3">Get a Free Inspection</a>
+      </div>
+      <div class="col-md-6">
+        <img src="docs/assets/images/3sons_index_roofing.jpg"
+             alt="Residential roof replacement in progress — new underlayment installed"
+             class="featurette-img" />
+             <!-- style="width:100%; height:380px; object-fit:cover; border-radius:4px; display:block;" -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURETTE 2 -->
+<section class="featurette-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 order-md-2">
+        <span class="section-eyebrow">Painting</span>
+        <h2 class="section-title">Colors That Make Your Property Stand Out</h2>
+        <div class="section-divider"></div>
+        <p class="text-muted">Our professional painters handle everything — surface prep, priming, painting, and cleanup. We use premium low-VOC paints that look better and last longer, whether it's a single room or a full commercial building exterior.</p>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Interior &amp; exterior residential</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Commercial buildings &amp; warehouses</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Power washing &amp; surface prep included</li>
+        </ul>
+        <a href="Contact.html" class="btn btn-brand mt-3">Schedule a Consultation</a>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img src="docs/assets/images/3sons_index_painting.jpg"
+             alt="Large residential exterior painting project with scaffolding"
+             class="featurette-img" />
+             <!-- style="width:100%; height:380px; object-fit:cover; border-radius:4px; display:block;" -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURETTE 3 -->
+<section class="featurette-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <span class="section-eyebrow">Gutters &amp; Siding</span>
+        <h2 class="section-title">Protect Every Inch of Your Exterior</h2>
+        <div class="section-divider"></div>
+        <p class="text-muted">Properly installed gutters and siding are your home's first defense against the elements. Our crews are experienced with all major systems and materials — and we leave every job site clean and tidy.</p>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Seamless aluminum gutters</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Vinyl, Hardie board &amp; wood siding</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-orange me-2"></i>Gutter guards &amp; leaf protection</li>
+        </ul>
+        <a href="Contact.html" class="btn btn-brand mt-3">Get a Quote</a>
+      </div>
+      <div class="col-md-6">
+        <img src="docs/assets/images/3sons_index_guttersSiding.jpg"
+             alt="Gutters and siding installation on a residential home"
+             class="featurette-img" />
+             <!-- style="width:100%; height:380px; object-fit:cover; border-radius:4px; display:block;" -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band text-center">
+  <div class="container position-relative">
+    <h2 class="mb-2">Ready to Start Your Project?</h2>
+    <p class="text-white opacity-75 mb-4" style="font-size:1.1rem;">Call us today for a free, no-obligation estimate. We serve the greater Memphis area.</p>
+    <a href="tel:9012888962" class="phone-number d-block mb-4">901.288.8962</a>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a href="Contact.html" class="btn btn-brand btn-lg">Request a Free Estimate</a>
+      <a href="Services.html" class="btn btn-brand-outline btn-lg">View Our Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-md-4">
+        <div class="footer-logo"><img src="docs/assets/images/logo_3Sons.jpg" alt="3 Son's Construction" /></div>
+        <p style="font-size:.9rem;">Roofing &bull; Painting &bull; Gutters &bull; Siding<br>Commercial &amp; Residential &mdash; Memphis, TN</p>
+        <div class="mt-3">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-google"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <h5>Pages</h5>
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Prices.html">Pricing</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <h5>Services</h5>
+        <a href="Services.html">Roofing</a>
+        <a href="Services.html">Painting</a>
+        <a href="Services.html">Gutters</a>
+        <a href="Services.html">Siding</a>
+      </div>
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <p class="mb-2" style="font-size:.9rem;"><i class="bi bi-telephone-fill text-brand-orange me-2"></i><a href="tel:9012888962">901.288.8962</a></p>
+        <p class="mb-2" style="font-size:.9rem;"><i class="bi bi-geo-alt-fill text-brand-orange me-2"></i>Memphis, TN</p>
+        <p class="mb-0" style="font-size:.9rem;"><i class="bi bi-clock-fill text-brand-orange me-2"></i>Mon&ndash;Sat: 7am &ndash; 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="mb-0">&copy; 2025 3 Son's Construction. All rights reserved. &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="docs/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

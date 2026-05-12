@@ -1,398 +1,239 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Astro v5.13.2" />
-    <title>3 Son's Construction</title>
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/album/"
-    />
-    <script src="docs/assets/js/color-modes.js"></script>
-    <link href="docs/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <meta name="theme-color" content="#712cf9" />
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow:
-          inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
-      }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
-      }
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-  </head>
-  <body>
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">3 Son's Construction</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Prices.html">Prices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Services & Projects</h1>
-            <p class="lead text-body-secondary">
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don’t simply skip over it entirely.
-            </p>
-            <p>
-              <a href="#" class="btn btn-primary my-2">Main call to action</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
-          </div>
-        </div>
-      </section>
-      <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  aria-label="Placeholder: Thumbnail"
-                  class="bd-placeholder-img card-img-top"
-                  height="225"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  width="100%"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="3 Son's Construction Services — Roofing, Painting, Gutters, Siding in Memphis, TN." />
+  <title>Services &amp; Projects | 3 Son's Construction</title>
+  <link href="docs/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="docs/assets/3sons-theme.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-3sons fixed-top">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html">
+      <img src="docs/assets/images/logo_3Sons.jpg" alt="3 Son's Construction" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-md-center gap-md-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        <li class="nav-item ms-md-3"><a class="btn btn-brand" href="tel:9012888962"><i class="bi bi-telephone-fill me-1"></i>901.288.8962</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="nav-accent-bar"></div>
+
+<!-- SERVICES HERO -->
+<header class="services-hero page-top-spacer">
+  <div class="container position-relative text-center text-white">
+    <span class="section-eyebrow" style="color:var(--brand-orange);">What We Offer</span>
+    <h1>Services &amp; Projects</h1>
+    <p class="lead mx-auto" style="max-width:600px;">From rooftop to foundation, we handle the jobs that protect and beautify your property. Browse our service areas and completed projects below.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+      <a href="Contact.html" class="btn btn-brand btn-lg">Get a Free Estimate</a>
+      <a href="Prices.html" class="btn btn-brand-outline btn-lg">View Pricing</a>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICE FILTER TABS -->
+<div class="bg-white border-bottom sticky-top" style="top:84px;z-index:100;">
+  <div class="container">
+    <ul class="nav nav-pills py-3 gap-2 flex-nowrap overflow-auto" id="serviceTabs">
+      <li class="nav-item"><button class="nav-link active px-4 py-2" style="background:var(--brand-blue);border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;" data-filter="all">All Projects</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="roofing">Roofing</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="painting">Painting</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="gutters">Gutters</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="siding">Siding</button></li>
+    </ul>
+  </div>
+</div>
+
+<!-- PROJECT CARDS ALBUM -->
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+      <!-- Roofing projects -->
+      <div class="col" data-category="roofing">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-house-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Roofing</span>
+            <h5 class="card-title">Residential Roof Replacement</h5>
+            <p class="card-text text-muted small">Complete tear-off and replacement with 30-year architectural shingles. Storm damage claim handled from start to finish.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
           </div>
         </div>
       </div>
-    </main>
-    <footer class="text-body-secondary py-5">
-      <div class="container">
-        <p class="float-end mb-1"><a href="#">Back to top</a></p>
+      <div class="col" data-category="roofing">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-building" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Roofing</span>
+            <h5 class="card-title">Commercial Flat Roof</h5>
+            <p class="card-text text-muted small">TPO membrane installation on a 12,000 sq ft commercial warehouse. On-schedule, on-budget delivery.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
       </div>
-    </footer>
-    <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
-  </body>
+      <div class="col" data-category="roofing">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-tools" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Roofing</span>
+            <h5 class="card-title">Emergency Repair &amp; Tarping</h5>
+            <p class="card-text text-muted small">Same-day emergency tarping following a severe storm, followed by a full repair assessment and scheduled fix.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painting projects -->
+      <div class="col" data-category="painting">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-brush-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Painting</span>
+            <h5 class="card-title">Exterior Home Repaint</h5>
+            <p class="card-text text-muted small">Full exterior prep, prime, and two-coat paint application on a two-story colonial. Power-washed and ready to sell.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-category="painting">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-door-open-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Painting</span>
+            <h5 class="card-title">Interior Full-Home Paint</h5>
+            <p class="card-text text-muted small">All walls, ceilings, and trim painted in a new construction home — color consultation included, done in 4 days.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-category="painting">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-shop" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Painting</span>
+            <h5 class="card-title">Retail Storefront Exterior</h5>
+            <p class="card-text text-muted small">Commercial exterior repaint including masonry block, stucco, and metal fascia for a mid-south retail strip.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gutters projects -->
+      <div class="col" data-category="gutters">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-droplet-half" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Gutters</span>
+            <h5 class="card-title">Seamless Aluminum Gutters</h5>
+            <p class="card-text text-muted small">Full perimeter seamless 6" gutters installed with hidden hangers and downspout extensions, color-matched to trim.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-category="gutters">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-shield-check" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Gutters</span>
+            <h5 class="card-title">Gutter Guard Installation</h5>
+            <p class="card-text text-muted small">Micro-mesh gutter guard system installed on 200 LF of existing gutters — no more cleaning, no more clogging.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Siding projects -->
+      <div class="col" data-category="siding">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-grid-3x3-gap-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Siding</span>
+            <h5 class="card-title">Full Vinyl Siding Replacement</h5>
+            <p class="card-text text-muted small">Removed rotted wood siding and installed premium insulated vinyl siding with new moisture barrier and trim throughout.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-category="siding">
+        <div class="card project-card h-100">
+          <div class="card-img-placeholder"><i class="bi bi-house-door-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
+          <div class="card-body">
+            <span class="card-badge">Siding</span>
+            <h5 class="card-title">James Hardie Board Siding</h5>
+            <p class="card-text text-muted small">Fiber cement board &amp; batten siding installation with factory-finish coating — built to withstand Memphis weather for 30+ years.</p>
+            <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<section class="cta-band text-center">
+  <div class="container position-relative">
+    <h2 class="mb-2">Don't See Your Project Type?</h2>
+    <p class="text-white opacity-75 mb-4" style="font-size:1.1rem;">Give us a call — we handle a wide range of exterior and interior construction work.</p>
+    <a href="tel:9012888962" class="phone-number d-block mb-4">901.288.8962</a>
+    <a href="Contact.html" class="btn btn-brand btn-lg">Contact Us Today</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-md-4">
+        <div class="footer-logo"><img src="docs/assets/images/logo_3Sons.jpg" alt="3 Son's Construction" /></div>
+        <p style="font-size:.9rem;">Roofing &bull; Painting &bull; Gutters &bull; Siding<br>Commercial &amp; Residential &mdash; Memphis, TN</p>
+        <div class="mt-3">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-google"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <h5>Pages</h5>
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Prices.html">Pricing</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <h5>Services</h5>
+        <a href="Services.html">Roofing</a>
+        <a href="Services.html">Painting</a>
+        <a href="Services.html">Gutters</a>
+        <a href="Services.html">Siding</a>
+      </div>
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <p class="mb-2" style="font-size:.9rem;"><i class="bi bi-telephone-fill text-brand-orange me-2"></i><a href="tel:9012888962">901.288.8962</a></p>
+        <p class="mb-2" style="font-size:.9rem;"><i class="bi bi-geo-alt-fill text-brand-orange me-2"></i>Memphis, TN</p>
+        <p class="mb-0" style="font-size:.9rem;"><i class="bi bi-clock-fill text-brand-orange me-2"></i>Mon&ndash;Sat: 7am &ndash; 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="mb-0">&copy; 2025 3 Son's Construction. All rights reserved. &nbsp;&middot;&nbsp; <a href="#">Privacy</a> &nbsp;&middot;&nbsp; <a href="#">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="docs/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
