@@ -9,6 +9,34 @@
   <link href="docs/assets/3sons-theme.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
+
+<script>
+  const buttons = document.querySelectorAll('#serviceTabs button');
+  const cards   = document.querySelectorAll('.album .col[data-category]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+      // Update active button style
+      buttons.forEach(b => {
+        b.style.background = 'transparent';
+        b.style.color = 'var(--brand-blue)';
+      });
+      btn.style.background = 'var(--brand-blue)';
+      btn.style.color = '#fff';
+
+      // Filter cards
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-3sons fixed-top">
@@ -39,20 +67,20 @@
     <p class="lead mx-auto" style="max-width:600px;">From rooftop to foundation, we handle the jobs that protect and beautify your property. Browse our service areas and completed projects below.</p>
     <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
       <a href="Contact.html" class="btn btn-brand btn-lg">Get a Free Estimate</a>
-      <a href="Prices.html" class="btn btn-brand-outline btn-lg">View Pricing</a>
     </div>
   </div>
 </header>
 
-<!-- SERVICE FILTER TABS -->
+<!-- SERVICE FILTER TABS 
+-->
 <div class="bg-white border-bottom sticky-top" style="top:84px;z-index:100;">
   <div class="container">
     <ul class="nav nav-pills py-3 gap-2 flex-nowrap overflow-auto" id="serviceTabs">
       <li class="nav-item"><button class="nav-link active px-4 py-2" style="background:var(--brand-blue);border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;" data-filter="all">All Projects</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="roofing">Roofing</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="painting">Painting</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="gutters">Gutters</button></li>
-      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="siding">Siding</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="exterior">Exterior</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="interior">Interior</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="restoration">Restoration</button></li>
+      <li class="nav-item"><button class="nav-link px-4 py-2" style="border-radius:2px;font-family:var(--font-display);font-weight:700;letter-spacing:.04em;color:var(--brand-blue);border:2px solid var(--brand-blue);" data-filter="home-systems">Home Systems</button></li>
     </ul>
   </div>
 </div>
@@ -67,8 +95,8 @@
         <div class="card project-card h-100">
           <div class="card-img-placeholder"><i class="bi bi-house-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
-            <span class="card-badge">Roofing</span>
-            <h5 class="card-title">Residential Roof Replacement</h5>
+            <span class="card-badge">Home-Systems</span>
+            <h5 class="card-title">Generac</h5>
             <p class="card-text text-muted small">Complete tear-off and replacement with 30-year architectural shingles. Storm damage claim handled from start to finish.</p>
             <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
           </div>
@@ -78,8 +106,8 @@
         <div class="card project-card h-100">
           <div class="card-img-placeholder"><i class="bi bi-building" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
-            <span class="card-badge">Roofing</span>
-            <h5 class="card-title">Commercial Flat Roof</h5>
+            <span class="card-badge">Exterior</span>
+            <h5 class="card-title">Pools</h5>
             <p class="card-text text-muted small">TPO membrane installation on a 12,000 sq ft commercial warehouse. On-schedule, on-budget delivery.</p>
             <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
           </div>
@@ -89,8 +117,8 @@
         <div class="card project-card h-100">
           <div class="card-img-placeholder"><i class="bi bi-tools" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
-            <span class="card-badge">Roofing</span>
-            <h5 class="card-title">Emergency Repair &amp; Tarping</h5>
+            <span class="card-badge">Exterior</span>
+            <h5 class="card-title">Stucco</h5>
             <p class="card-text text-muted small">Same-day emergency tarping following a severe storm, followed by a full repair assessment and scheduled fix.</p>
             <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
           </div>
@@ -103,7 +131,7 @@
           <div class="card-img-placeholder"><i class="bi bi-brush-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
             <span class="card-badge">Painting</span>
-            <h5 class="card-title">Exterior Home Repaint</h5>
+            <h5 class="card-title">Roofing &amp; Gutters</h5>
             <p class="card-text text-muted small">Full exterior prep, prime, and two-coat paint application on a two-story colonial. Power-washed and ready to sell.</p>
             <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
           </div>
@@ -114,7 +142,7 @@
           <div class="card-img-placeholder"><i class="bi bi-door-open-fill" style="font-size:3rem;color:var(--brand-blue);opacity:.25;"></i></div>
           <div class="card-body">
             <span class="card-badge">Painting</span>
-            <h5 class="card-title">Interior Full-Home Paint</h5>
+            <h5 class="card-title">Siding</h5>
             <p class="card-text text-muted small">All walls, ceilings, and trim painted in a new construction home — color consultation included, done in 4 days.</p>
             <a href="Contact.html" class="btn btn-brand-blue btn-sm">Get Similar Quote</a>
           </div>
