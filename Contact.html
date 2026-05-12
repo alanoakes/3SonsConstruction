@@ -70,7 +70,7 @@
             <div class="ci-icon"><i class="bi bi-clock-fill"></i></div>
             <div>
               <div class="text-white opacity-60 small">Hours</div>
-              <span class="text-white">Mon – Sat: 7:00am – 6:00pm</span>
+              <span class="text-white">Mon – Fri: 8:00am – 5:00pm</span>
             </div>
           </div>
 
@@ -136,17 +136,37 @@
               <div class="col-sm-6">
                 <label for="serviceType" class="form-label">Service Needed</label>
                 <select class="form-select" id="serviceType" required>
-                  <option value="">Select a service...</option>
-                  <option>Roofing — Repair</option>
-                  <option>Roofing — Full Replacement</option>
-                  <option>Painting — Interior</option>
-                  <option>Painting — Exterior</option>
-                  <option>Gutters — Installation</option>
-                  <option>Gutters — Cleaning / Repair</option>
-                  <option>Siding — Installation</option>
-                  <option>Siding — Repair</option>
-                  <option>Multiple Services</option>
-                  <option>Other / Not Sure</option>
+                    <option value="">Select a service...</option>
+                    
+                    <optgroup label="Exterior">
+                      <option>Roofing &amp; Gutters</option>
+                      <option>Siding</option>
+                      <option>Painting — Exterior</option>
+                      <option>Stucco</option>
+                      <option>Concrete</option>
+                    </optgroup>
+                    
+                    <optgroup label="Interior">
+                      <option>Interior Remodel (Kitchen / Bath)</option>
+                      <option>Flooring</option>
+                      <option>Custom Cabinets, Closets &amp; Bookshelves</option>
+                      <option>Painting — Interior</option>
+                    </optgroup>
+                    
+                    <optgroup label="Restoration">
+                      <option>Water Restoration</option>
+                      <option>Crawl Space Repair &amp; Encapsulation</option>
+                    </optgroup>
+                    
+                    <optgroup label="Upgrades &amp; Additions">
+                      <option>Generac Generator</option>
+                      <option>Pool Installation</option>
+                    </optgroup>
+                    
+                    <optgroup label="Other">
+                      <option>Multiple Services</option>
+                      <option>Other / Not Sure</option>
+                    </optgroup>
                 </select>
                 <div class="invalid-feedback">Please select a service type.</div>
               </div>
