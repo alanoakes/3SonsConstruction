@@ -445,6 +445,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 28px rgba(0,0,0,.14);
   transform: translateY(-4px);
 }
+/*
 .project-card .card-img-placeholder {
   height: 200px;
   background: #d0d8e8;
@@ -456,6 +457,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .9rem;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+*/
+/* ── Service card images ──────────────────────────── */
+.card-img-placeholder {
+  height: 200px;
+  overflow: hidden;
+  background: #dde3ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .4s ease;
+  display: block;
+}
+
+.project-card:hover .card-img-placeholder img {
+  transform: scale(1.05);
 }
 .project-card .card-badge {
   display: inline-block;
