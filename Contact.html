@@ -321,20 +321,58 @@
 
 <script src="docs/assets/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// Bootstrap form validation
-(function () {
-  'use strict';
-  var forms = document.querySelectorAll('.needs-validation');
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1d_0wROMGFtq-wMpYE646z7X6bLX9wfo9pprH27T1XtWZoh6qCHECHnB9KVFWrXMlOA/exec';
+
+const form = document.querySelector('.needs-validation');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  if (!form.checkValidity()) {
+    form.classList.add('was-validated');
+    return;
+  }
+
+  const submitBtn = form.querySelector('[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+
+  const payload = {
+    firstName:    document.getElementById('firstName').value,
+    lastName:     document.getElementById('lastName').value,
+    phone:        document.getElementById('phone').value,
+    email:        document.getElementById('email').value,
+    address:      document.getElementById('address').value,
+    serviceType:  document.getElementById('serviceType').value,
+    propertyType: document.getElementById('propertyType').value,
+    message:      document.getElementById('message').value,
+    prefersCall:  document.getElementById('preferCall').checked ? 'Yes' : 'No'
+  };
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    // Success state
+    form.innerHTML = `
+      <div class="text-center py-5">
+        <i class="bi bi-check-circle-fill text-brand-orange" style="font-size:3.5rem;"></i>
+        <h3 class="mt-3" style="font-family:var(--font-display);color:var(--brand-blue);">Request Received!</h3>
+        <p class="text-muted">Thanks for reaching out. We'll be in touch within 1 business day.</p>
+        <a href="tel:9012888962" class="btn btn-brand mt-2">
+          <i class="bi bi-telephone-fill me-2"></i>Or call us now: 901.288.8962
+        </a>
+      </div>`;
+  })
+  .catch(() => {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<i class="bi bi-send-fill me-2"></i>Submit Request';
+    alert('Something went wrong. Please call us directly at 901.288.8962.');
   });
-})();
+});
 </script>
 </body>
 </html>
