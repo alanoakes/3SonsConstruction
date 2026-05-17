@@ -477,7 +477,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform .4s ease;
   display: block;
 }
-
+.card-img-placeholder img.card-img-top {
+  object-position: top;
+  object-position: center;
+}
 .project-card:hover .card-img-placeholder img {
   transform: scale(1.05);
 }
