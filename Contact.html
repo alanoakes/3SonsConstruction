@@ -181,7 +181,7 @@
           <p class="text-muted mb-4">Tell us about your project and we'll be in touch promptly.</p>
 
           <form class="needs-validation" novalidate>
-
+          
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First Name</label>
@@ -193,7 +193,7 @@
                 <input type="text" class="form-control" id="lastName" placeholder="Smith" required />
                 <div class="invalid-feedback">Last name is required.</div>
               </div>
-
+          
               <div class="col-sm-6">
                 <label for="phone" class="form-label">Phone Number</label>
                 <input type="tel" class="form-control" id="phone" placeholder="(901) 555-0000" required />
@@ -204,47 +204,47 @@
                 <input type="email" class="form-control" id="email" placeholder="you@example.com" />
                 <div class="invalid-feedback">Please enter a valid email address.</div>
               </div>
-
+          
               <div class="col-12">
                 <label for="address" class="form-label">Property Address</label>
                 <input type="text" class="form-control" id="address" placeholder="1234 Main St, Memphis, TN" required />
                 <div class="invalid-feedback">Property address is required.</div>
               </div>
-
+          
               <div class="col-sm-6">
                 <label for="serviceType" class="form-label">Service Needed</label>
                 <select class="form-select" id="serviceType" required>
-                    <option value="">Select a service...</option>
-                    
-                    <optgroup label="Exterior">
-                      <option>Roofing &amp; Gutters</option>
-                      <option>Siding</option>
-                      <option>Painting — Exterior</option>
-                      <option>Stucco</option>
-                      <option>Concrete</option>
-                    </optgroup>
-                    
-                    <optgroup label="Interior">
-                      <option>Interior Remodel (Kitchen / Bath)</option>
-                      <option>Flooring</option>
-                      <option>Custom Cabinets, Closets &amp; Bookshelves</option>
-                      <option>Painting — Interior</option>
-                    </optgroup>
-                    
-                    <optgroup label="Restoration">
-                      <option>Water Restoration</option>
-                      <option>Crawl Space Repair &amp; Encapsulation</option>
-                    </optgroup>
-                    
-                    <optgroup label="Upgrades &amp; Additions">
-                      <option>Generac Generator</option>
-                      <option>Pool Installation</option>
-                    </optgroup>
-                    
-                    <optgroup label="Other">
-                      <option>Multiple Services</option>
-                      <option>Other / Not Sure</option>
-                    </optgroup>
+                  <option value="">Select a service...</option>
+          
+                  <optgroup label="Exterior">
+                    <option>Roofing &amp; Gutters</option>
+                    <option>Siding</option>
+                    <option>Painting — Exterior</option>
+                    <option>Stucco</option>
+                    <option>Concrete</option>
+                  </optgroup>
+          
+                  <optgroup label="Interior">
+                    <option>Interior Remodel (Kitchen / Bath)</option>
+                    <option>Flooring</option>
+                    <option>Custom Cabinets, Closets &amp; Bookshelves</option>
+                    <option>Painting — Interior</option>
+                  </optgroup>
+          
+                  <optgroup label="Restoration">
+                    <option>Water Restoration</option>
+                    <option>Crawl Space Repair &amp; Encapsulation</option>
+                  </optgroup>
+          
+                  <optgroup label="Upgrades &amp; Additions">
+                    <option>Generac Generator</option>
+                    <option>Pool Installation</option>
+                  </optgroup>
+          
+                  <optgroup label="Other">
+                    <option>Multiple Services</option>
+                    <option>Other / Not Sure</option>
+                  </optgroup>
                 </select>
                 <div class="invalid-feedback">Please select a service type.</div>
               </div>
@@ -259,19 +259,46 @@
                   <option>HOA / Community</option>
                 </select>
               </div>
-
+          
               <div class="col-12">
                 <label for="message" class="form-label">Project Details</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Tell us more about the project — size, timeline, any special concerns, etc."></textarea>
+                <textarea class="form-control" id="message" rows="5"
+                  placeholder="Tell us more about the project — size, timeline, any special concerns, etc."></textarea>
               </div>
-
+          
               <div class="col-12">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="preferCall" />
                   <label class="form-check-label text-muted" for="preferCall">I prefer to be contacted by phone</label>
                 </div>
               </div>
-
+          
+              <div class="col-12">
+                <label for="hearAboutUs" class="form-label">How did you hear about us?</label>
+                <select class="form-select" id="hearAboutUs">
+                  <option value="">Select...</option>
+                  <optgroup label="Online">
+                    <option>Google Search</option>
+                    <option>Google Maps</option>
+                    <option>Yelp</option>
+                    <option>Facebook</option>
+                    <option>Nextdoor</option>
+                    <option>Angi / HomeAdvisor</option>
+                    <option>Houzz</option>
+                    <option>BBB</option>
+                  </optgroup>
+                  <optgroup label="Offline">
+                    <option>Word of Mouth / Friend or Family</option>
+                    <option>Yard Sign</option>
+                    <option>Drove Past a Job Site</option>
+                    <option>Repeat Customer</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option>Other</option>
+                  </optgroup>
+                </select>
+              </div>
+          
               <div class="col-12">
                 <button class="btn btn-brand btn-lg w-100" type="submit">
                   <i class="bi bi-send-fill me-2"></i>Submit Request
@@ -690,7 +717,8 @@ form.addEventListener('submit', function (e) {
     serviceType:  document.getElementById('serviceType').value,
     propertyType: document.getElementById('propertyType').value,
     message:      document.getElementById('message').value,
-    prefersCall:  document.getElementById('preferCall').checked ? 'Yes' : 'No'
+    prefersCall:  document.getElementById('preferCall').checked ? 'Yes' : 'No',
+    hearAboutUs: document.getElementById('hearAboutUs').value
   };
 
   fetch(SCRIPT_URL, {
